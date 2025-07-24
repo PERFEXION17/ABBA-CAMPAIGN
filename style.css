@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --color_1: #d3d3d3;
+    --color_2: #1b2a49;
+    --accent: #1d1d1d;
+    --green: #2ecc71;
+    --neut: #fff;
+    --font_1: "Montserrat", sans-serif;
+    --font_2: "Quicksand", sans-serif;
+}
+
+.darkmode {
+    --color_1: #1d1d1d;
+    --neut: #1d1d1d;
+    --color_2: #ffffff;
+    --accent: #d3d3d3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font_1);
+    background-color: var(--neut);
+    color: var(--accent);
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    margin: .5rem;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--neut);
+    box-shadow: 1px 1px 5px var(--accent);
+    z-index: 1;
+}
+
+nav .logo {
+    width: 90px;
+    display: flex;
+}
+
+nav .logo img {
+    width: 100%;
+}
+
+.nav_text {
+    text-align: center;
+    font-weight: 600;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    gap: .5rem;
+}
+
+.menu a {
+    color: var(--color_2);
+}
+
+.menu a:active {
+    color: var(--accent);
+}
+
+.menu li {
+    list-style: none;
+}
+
+.main {
+    position: relative;
+    top: 4rem;
+    padding: 1rem;
+}
+
+.hero {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.hero .span {
+    margin-top: .5rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.hero_img {
+    width: 100%;
+}
+
+.hero_img img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-family: var(--font_2);
+}
+
+.con_mile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-family: var(--font_2);
+    animation: scroll linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+}
+
+.box_vm {
+    animation: scroll linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+}
+
+@keyframes scroll {
+    from {
+        opacity: 0;
+        scale: .5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.box p {
+    padding: 1rem;
+    background-color: var(--green);
+    border-radius: 1rem;
+    font-weight: 500;
+}
+
+.icon {
+    color: var(--green);
+    font-size: 2.5rem;
+}
+
+.box_vm p {
+    padding: 1rem;
+    background-color: var(--color_1);
+    border-radius: 1rem;
+    font-weight: 500;
+    outline: 2px solid #d3d3d3;
+}
+
+.con ul {
+    padding: 2rem;
+}
+
+.slide {
+    animation: slide linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.con ul li {
+    margin: .5rem;
+    padding: .5rem;
+    list-style-image: url('data:image/svg+xml,<svg transform="scale(1) translate(0)" transform-origin="center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(46,204,113,1)"><path d="M17.0007 1.20825 18.3195 3.68108 20.7923 4.99992 18.3195 6.31876 17.0007 8.79159 15.6818 6.31876 13.209 4.99992 15.6818 3.68108 17.0007 1.20825ZM8.00065 4.33325 10.6673 9.33325 15.6673 11.9999 10.6673 14.6666 8.00065 19.6666 5.33398 14.6666.333984 11.9999 5.33398 9.33325 8.00065 4.33325ZM19.6673 16.3333 18.0007 13.2083 16.334 16.3333 13.209 17.9999 16.334 19.6666 18.0007 22.7916 19.6673 19.6666 22.7923 17.9999 19.6673 16.3333Z"></path></svg>');
+}
+
+.con ul li::marker {
+    font-size: 3rem;
+    line-height: .1rem;
+}
+
+.post {
+    color: var(--accent);
+    font-size: 1.2rem;
+    font-weight: 500;
+    animation: slidex linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+}
+
+@keyframes slidex {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.post_txt {
+    padding: 1.5rem;
+    line-height: 1.7;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.post_txt span {
+    font-family: var(--font_1);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+@media (min-width : 768px) {
+    h2 {
+        font-size: 2rem;
+        margin: 1rem;
+    }
+
+    .main {
+        top: 6rem;
+    }
+
+    .nav_text {
+        font-size: 1.7rem;
+        font-weight: 700;
+    }
+
+    .menu {
+        gap: 1rem;
+    }
+
+    .menu li {
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding: .5rem;
+    }
+
+    .menu a:hover {
+        color: var(--accent);
+        border-bottom: 2px solid var(--color_2);
+    }
+
+    .hero {
+        flex-direction: row;
+    }
+
+    .hero h1 {
+        width: 50%;
+        margin: 0 1rem;
+        padding: 0 1rem;
+        font-size: 2.5rem;
+    }
+
+    .hero .span {
+        font-size: 3rem;
+    }
+
+    .hero_img {
+        width: 50%;
+    }
+
+    .con {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .con .con_mile {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 50%;
+        font-size: 1.3rem;
+    }
+
+    .box p {
+        padding: 2rem;
+    }
+
+    .box_vm {
+        width: 50%;
+        font-size: 1.3rem;
+    }
+
+    .box_vm p {
+        padding: 2rem;
+    }
+
+    .con ul {
+        width: 50%;
+    }
+
+    .con ul li {
+        margin: 0;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+}
