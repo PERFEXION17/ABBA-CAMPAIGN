@@ -12,7 +12,7 @@
 
 html{
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 6rem;
 }
 
 .darkmode {
@@ -96,8 +96,7 @@ nav .logo img {
 }
 
 .main {
-    padding-top: 5rem;
-    padding: 1rem;
+    padding-top: 6rem;
 }
 
 .hero {
