@@ -10,6 +10,11 @@
     --font_2: "Quicksand", sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
+
 .darkmode {
     --color_1: #1d1d1d;
     --neut: #1d1d1d;
@@ -91,8 +96,7 @@ nav .logo img {
 }
 
 .main {
-    position: relative;
-    top: 4rem;
+    padding-top: 4rem;
     padding: 1rem;
 }
 
