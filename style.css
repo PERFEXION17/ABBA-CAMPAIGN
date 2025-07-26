@@ -264,6 +264,12 @@ nav .logo img {
     font-weight: 500;
 }
 
+.foot{
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
 @media (min-width : 768px) {
     h2 {
         font-size: 2rem;
