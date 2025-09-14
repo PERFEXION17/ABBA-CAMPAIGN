@@ -10,7 +10,7 @@
     --font_2: "Quicksand", sans-serif;
 }
 
-html{
+html {
     scroll-behavior: smooth;
     scroll-padding-top: 6.5rem;
 }
@@ -85,6 +85,24 @@ nav .logo img {
 
 .menu a {
     color: var(--color_2);
+    padding: .25rem;
+    position: relative;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: .125rem;
+    width: 0;
+    transition: .5s ease;
+    background-color: var(--accent);
+    border-radius: .5rem;
+}
+
+.menu a:hover::after {
+    width: 100%;
 }
 
 .menu a:active {
@@ -264,13 +282,13 @@ nav .logo img {
     font-weight: 500;
 }
 
-.foot{
+.foot {
     padding: 1rem;
     font-size: 1.2rem;
     font-weight: 700;
 }
 
-footer{
+footer {
     padding: 1rem;
     font-family: var(--font_2);
     text-align: center;
@@ -375,4 +393,85 @@ footer{
         font-size: 1.3rem;
         font-weight: 500;
     }
+}
+
+/* -----AGENDA----- */
+
+.agenda {
+    max-width: 43.75rem;
+    margin: 2rem auto;
+}
+
+.agenda h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.agenda h3{
+    font-weight: 600;
+}
+
+.agenda-item {
+    margin: 0.5rem 0;
+    border: 1px solid var(--color_1);
+    overflow: hidden;
+}
+
+.agenda-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--neut);
+    color: var(--color_2);
+    border: none;
+    padding: 1rem;
+    font-family: var(--font_1);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    border-bottom: 1px solid var(--color_1);
+    transition: background 0.3s ease;
+}
+
+.agenda-header:hover {
+    background: var(--color_1);
+}
+
+.agenda-header i {
+    color: var(--green);
+}
+
+.symbol {
+    font-size: 1.3rem;
+    color: var(--color_2);
+}
+
+.agenda-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 1rem;
+}
+
+.agenda-content p {
+    margin: 1rem 0;
+}
+
+.agenda-content ul li {
+    margin: .5rem;
+    padding: .5rem;
+    list-style-image: url('data:image/svg+xml,<svg transform="scale(1) translate(0)" transform-origin="center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(46,204,113,1)"><path d="M17.0007 1.20825 18.3195 3.68108 20.7923 4.99992 18.3195 6.31876 17.0007 8.79159 15.6818 6.31876 13.209 4.99992 15.6818 3.68108 17.0007 1.20825ZM8.00065 4.33325 10.6673 9.33325 15.6673 11.9999 10.6673 14.6666 8.00065 19.6666 5.33398 14.6666.333984 11.9999 5.33398 9.33325 8.00065 4.33325ZM19.6673 16.3333 18.0007 13.2083 16.334 16.3333 13.209 17.9999 16.334 19.6666 18.0007 22.7916 19.6673 19.6666 22.7923 17.9999 19.6673 16.3333Z"></path></svg>');
+}
+
+.agenda-item.active .agenda-content {
+    max-height: max-content;
+    padding: 1rem;
+}
+
+.agenda-item.active .symbol {
+    content: "-";
 }
