@@ -66,9 +66,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Open clicked item
         item.classList.add("active");
         symbol.textContent = "-";
-        // set padding first so scrollHeight accounts for it
-        content.style.paddingTop = "1rem";
-        content.style.paddingBottom = "1rem";
+        // // set padding first so scrollHeight accounts for it
+        // content.style.paddingTop = "1rem";
+        // content.style.paddingBottom = "1rem";
       }
     });
   });
